@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="CssContact.css">
+    <script src="ContactJs.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Alvynno</h1>
+        </div>
+        <nav>
+            <a href="Portofolio.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>   
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Gunakan ini untuk mengkontak saya.</p>
+
+        <div class="contact-container">
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+                </div>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio | Designed by Me</p>
+    </footer>
+
+</body>
+</html>

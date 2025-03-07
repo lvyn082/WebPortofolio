@@ -1,0 +1,517 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe4e1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Tambahan untuk tampilan responsif */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+/* Logo Styling */
+.logo h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    animation: idleFloat 4s infinite alternate ease-in-out;
+    cursor: pointer;
+}
+
+/* Animasi Idle (Logo Melayang Pelan) */
+@keyframes idleFloat {
+    0% {
+        transform: translateY(0px);
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        transform: translateY(5px);
+        text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Efek Hover */
+.logo h1:hover {
+    transform: scale(1.2) rotate(-3deg);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1), 0px 0px 30px rgba(255, 20, 147, 0.9);
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: left;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.hero-container .avatar {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+}
+
+.hero-container .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    color: #ff1493;
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff0f5;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #ff1493;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.3rem;
+    color: #444;
+    max-width: 700px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Tambahkan efek hover untuk memberikan sedikit animasi */
+#about:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    #about {
+        padding: 40px 15px;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1.2rem;
+    }
+}
+/* Style untuk Navbar */
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efek underline saat hover */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffffff, #ff2b95);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek saat hover */
+nav a:hover {
+    color: #ffe4e1;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+/* Tombol "Say Hello" di Contact */
+.say-hello-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: #ff1493;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.say-hello-btn:hover {
+    background: #ff69b4;
+    transform: scale(1.1);
+}
+
+
+h1 {
+    color: #ff1493;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.avatar {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Gambar Profil */
+.avatar img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 5px solid transparent;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Efek Lingkaran Glow Pink */
+.avatar::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 20, 147, 1), rgba(255, 105, 180, 0.8), rgba(255, 192, 203, 0.6));
+    z-index: -1;
+    opacity: 0.85;
+    filter: blur(6px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+    animation: rotateBorder 6s linear infinite;
+}
+
+/* Efek Hover */
+.avatar:hover img {
+    transform: scale(1.25);
+    box-shadow: 0 14px 28px rgba(255, 20, 147, 0.9);
+}
+
+.avatar:hover::before {
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(12px);
+}
+
+/* Animasi Rotasi Lingkaran */
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsif */
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+/* Ukuran gambar dan video */
+.projects img, .projects video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek Hover */
+.projects img:hover, .projects video:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 20, 147, 0.6);
+}
+
+/* Tambahkan Judul Project */
+.project-item {
+    text-align: center;
+}
+
+.project-item p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;  
+    color: #ff1493;
+}
+/* Styling untuk Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #ff1493;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+/* Style untuk Section Skills */
+/* Section Skills */
+#skills {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffe4e1;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+/* Judul Skills */
+#skills h2 {
+    font-size: 2.5rem;
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Container untuk skill */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card untuk setiap skill */
+.skill {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+    text-align: center;
+    width: 160px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Ikon Skill */
+.skill i {
+    font-size: 2.8rem;
+    color: #ff69b4;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Teks Skill */
+.skill p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Efek Hover: Warna berubah dan bayangan lebih besar */
+.skill:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(255, 20, 147, 0.6);
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+}
+
+/* Efek Hover untuk Ikon */
+.skill:hover i {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Efek Hover untuk Teks */
+.skill:hover p {
+    color: white;
+}
+
+/* Efek Glow Animasi saat Hover */
+.skill::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -100%;
+    left: -100%;
+    background: radial-gradient(circle, rgba(255, 20, 147, 0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.skill:hover::before {
+    opacity: 1;
+}
+/* Contact Section */
+.contact-icons {
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    font-size: 30px;
+    margin: 0 15px;
+    color: #ff1493;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.contact-icons a:hover {
+    color: #ff69b4;
+    transform: scale(1.2);
+}
+
+/* Footer */
+/* Style untuk Footer */
+footer {
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffe4e1;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: #ffe4e1;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 0.8;
+}
